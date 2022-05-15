@@ -11,4 +11,5 @@ interface ScheduleDao {
 
     @Query("SELECT * FROM schedule WHERE stop_name = :stopName ORDER BY arrival_time ASC") // TODO Q Зачем здесь ASC?
     fun getByStopName(stopName: String): List<Schedule> // TODO Возвращает список объектов Schedule, учитывая аннотацию @Query
+
 }
